@@ -11,8 +11,9 @@ request.open("GET",URL);
 request.onload = ()=>{
     response = JSON.parse(request.response)
     response = response.photos;
+    const randomNumber = Math.floor(Math.random()*20);
 
-    for(let i = 0; i<response.length; i+=9 ){
+    for(let i = 0; i<response.length; i+=randomNumber){
 
         const card = document.createElement("div");
         card.className = "card";
